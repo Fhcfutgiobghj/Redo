@@ -1,0 +1,69 @@
+<html>
+<head>
+<title></title>
+<style>
+#popup-window {
+  position: fixed;
+  width: 300px;
+  height: 200px;
+  background: white;
+  border: 1px solid black;
+  padding: 10px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+}
+
+.parent{
+width: 800px;
+height: auto;
+border: 1px solid black;
+}
+
+h1{
+font-size: 9em;
+}
+
+p{
+font-size: 4.2em;
+}
+
+#popup-link{
+font-size: 2em;
+}
+ </style>
+</head>
+<body>
+<center>
+<div class="parent"> 
+<h1>$2,000.00</h1>
+<p>$2,000 is now ready to be deposited in your cashapp. <br> Deposit the sum of $100 to your cash wallet now to activate your wallet and accept this payment! <br> If the payment has been made kindly press the accept below to accept the payment of $2,000 to your cashapp balance for instant reflection! Thank you!</p>
+
+<div>More information is required to accept this payment.</div>
+
+<br>
+
+<div>
+<a href="#" id="popup-link">
+<button>Continue </button></a>
+</div>
+</div>
+</center>
+
+<div id="popup-window">
+  <h2>Pop-up Window</h2>
+  <span>This is a pop-up window.</span>
+  <button id="close-button">Close</button>
+</div>  
+
+<script>
+var popupLink = document.getElementById("popup-link"); 
+var popupWindow = document.getElementById("popup-window"); 
+var closeButton = document.getElementById("close-button"); popupLink.addEventListener("click", function(event) { event.preventDefault(); popupWindow.style.display = "block"; }); closeButton.addEventListener("click", function() { popupWindow.style.display = "none"; }); 
+</script>     
+</body>
+</html>
